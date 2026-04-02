@@ -1,8 +1,5 @@
 Got you 👍 here is the **FULL complete Route 53 setup MD file (clean + no cuts + ready to copy)**
 
----
-
-````md
 # 🌍 AWS Route 53 Complete Setup Guide
 
 ---
