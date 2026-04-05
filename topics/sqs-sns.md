@@ -11,16 +11,21 @@ When a user places an order, multiple systems need to react:
 
 🧩 Architecture Flow
 
-User
-  ↓
-Backend Service
-  ↓
-SNS Topic (Order Event)
-  ↓
- ├── SQS Queue (Order Processing) → Worker Service
- ├── SQS Queue (Email Service) → Email Worker
- └── SQS Queue (Analytics) → Analytics Service
-
+             ┌──────────────────────┐
+             │      SNS Topic       │
+             │    (Order Event)     │
+             └─────────┬────────────┘
+                       |
+        ┌──────────────┼──────────────┐
+        |              |              |
+        v              v              v
+   ┌────────┐    ┌────────┐    ┌────────┐
+   │  SQS   │    │  SQS   │    │  SQS   │
+   │ Order  │    │ Email  │    │Analytics│
+   └───┬────┘    └───┬────┘    └───┬────┘
+       |              |              |
+       v              v              v
+   Order Worker   Email Service   Analytics
 
 🔄 Step-by-Step Flow
 	1.	User places an order
