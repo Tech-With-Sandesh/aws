@@ -19,7 +19,7 @@ When a user places an order, multiple systems need to react:
 
 ## 🧩 Architecture Diagram
 
-```mermaid
+
 flowchart TD
     A[User] --> B[Backend Service]
     B --> C[SNS Topic (Order Event)]
