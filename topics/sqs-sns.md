@@ -22,7 +22,7 @@ flowchart TD
     D --> G[Order Worker]
     E --> H[Email Service]
     F --> I[Analytics Service]
-
+'''
 🔄 Step-by-Step Flow
 	1.	User places an order
 	2.	Backend publishes message to SNS
