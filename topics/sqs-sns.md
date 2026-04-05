@@ -9,20 +9,6 @@ When a user places an order, multiple systems need to react:
 	•	Update analytics
 	•	Trigger billing
 
-🧩 Architecture Flow
-```mermaid
-flowchart TD
-    A[User] --> B[Backend Service]
-    B --> C[SNS Topic (Order Event)]
-
-    C --> D[SQS Queue - Order]
-    C --> E[SQS Queue - Email]
-    C --> F[SQS Queue - Analytics]
-
-    D --> G[Order Worker]
-    E --> H[Email Service]
-    F --> I[Analytics Service]
-'''
 🔄 Step-by-Step Flow
 	1.	User places an order
 	2.	Backend publishes message to SNS
