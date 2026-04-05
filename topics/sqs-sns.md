@@ -10,22 +10,18 @@ When a user places an order, multiple systems need to react:
 	•	Trigger billing
 
 🧩 Architecture Flow
+```mermaid
+flowchart TD
+    A[User] --> B[Backend Service]
+    B --> C[SNS Topic (Order Event)]
 
-             +----------------------+
-             |      SNS Topic       |
-             |    (Order Event)     |
-             +----------+-----------+
-                        |
-        +---------------+----------------+
-        |               |                |
-        v               v                v
-   +----------+    +----------+    +-----------+
-   |   SQS    |    |   SQS    |    |    SQS    |
-   |  Order   |    |  Email   |    | Analytics |
-   +----+-----+    +----+-----+    +-----+-----+
-        |               |                |
-        v               v                v
-  Order Worker     Email Service    Analytics Service
+    C --> D[SQS Queue - Order]
+    C --> E[SQS Queue - Email]
+    C --> F[SQS Queue - Analytics]
+
+    D --> G[Order Worker]
+    E --> H[Email Service]
+    F --> I[Analytics Service]
 
 🔄 Step-by-Step Flow
 	1.	User places an order
