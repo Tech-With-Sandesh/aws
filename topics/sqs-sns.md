@@ -146,15 +146,3 @@ SNS = Notification
 SQS = Queue
 
 ⸻
-
-
----
-
-## ✅ What to do next
-
-- Create a repo  
-- Add `README.md`  
-- Paste this content  
-- Push → GitHub will render diagram automatically  
-
----
