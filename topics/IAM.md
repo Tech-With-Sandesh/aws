@@ -1,8 +1,3 @@
-Got it 👍 here’s a clean Markdown file with real IAM User vs Role examples — perfect to share or upload to GitHub.
-
-⸻
-
-
 # 🔐 AWS IAM User vs IAM Role (Real Examples)
 
 ---
@@ -142,23 +137,3 @@ Security	Lower	Higher
 👉 IAM Role = Temporary access without storing credentials
 
 ⸻
-
-
----
-
-## 🔥 How to use
-
-- Send this in DM (after “comment AWS”)  
-- Upload as GitHub README  
-- Use as PDF content  
-
----
-
-If you want next:
-
-- IAM policies deep dive  
-- STS explained  
-- Assume role flow diagram  
-- Cross-account IAM setup  
-
-Just say 🔥
