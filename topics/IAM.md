@@ -25,7 +25,7 @@ A developer needs to:
 
 ### 🔹 IAM User Setup
 
-```json
+
 {
   "User": "dev-user",
   "Permissions": ["AmazonEC2FullAccess", "AmazonS3ReadOnlyAccess"]
