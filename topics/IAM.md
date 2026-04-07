@@ -30,7 +30,7 @@ A developer needs to:
   "User": "dev-user",
   "Permissions": ["AmazonEC2FullAccess", "AmazonS3ReadOnlyAccess"]
 }
-
+```
 
 ⸻
 
